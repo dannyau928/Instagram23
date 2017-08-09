@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Instagram23
+
+  Created by Danny Au on 7/26/17.
+  Copyright © 2017 DannyAu. All rights reserved.
+*/
+
+OK = "OK";
+GET_USER_FAILURE_MESSAGE = "Unable to get user. Please try again later.";
+RECENT_MEDIA_EMPTY_MESSAGE = "You don't have any photos right now. Please pull down to refresh.";
+GET_RECENT_MEDIA_FAILURE_MESSAGE = "Unable to get recent media. Please try again later.";
+NUMBER_OF_LIKE = "%d like";
+NUMBER_OF_LIKES = "%d likes";
+LIKE_MEDIA_FAILURE_MESSAGE = "Unable to like media. Please try again later.";
+UNLIKE_MEDIA_FAILURE_MESSAGE = "Unable to unlike media. Please try again later.";
+GET_MEDIA_LIKES_FAILURE_MESSAGE = "Unable to get media likes. Please try again later.";

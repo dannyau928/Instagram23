@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2091D13208CB6B5F899431EE /* Pods_Instagram23Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCF550A6D93A71C208CD188 /* Pods_Instagram23Tests.framework */; };
+		35008B041F3C1ADF00E6C349 /* Instagram23UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B031F3C1ADF00E6C349 /* Instagram23UITests.swift */; };
+		35008B0C1F3C1B0100E6C349 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B0B1F3C1B0100E6C349 /* RouterTests.swift */; };
 		3517122C1F2945B400605BCC /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122B1F2945B400605BCC /* AppConstants.swift */; };
 		3517122E1F2947C500605BCC /* RestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122D1F2947C500605BCC /* RestExtensions.swift */; };
 		351712301F2949FF00605BCC /* UserAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122F1F2949FF00605BCC /* UserAuthWebViewController.swift */; };
@@ -27,7 +29,6 @@
 		35C3F3101F2921560083B71B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3F30F1F2921560083B71B /* ProfileViewController.swift */; };
 		35C3F3151F2921560083B71B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C3F3141F2921560083B71B /* Assets.xcassets */; };
 		35C3F3181F2921560083B71B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C3F3161F2921560083B71B /* LaunchScreen.storyboard */; };
-		35C3F3231F2921560083B71B /* Instagram23Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3F3221F2921560083B71B /* Instagram23Tests.swift */; };
 		35C3F3331F2925A50083B71B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C3F3321F2925A50083B71B /* Main.storyboard */; };
 		35C3F3351F2929EA0083B71B /* UserAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3F3341F2929EA0083B71B /* UserAuthViewController.swift */; };
 		35C3F3371F292DA50083B71B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C3F3361F292DA50083B71B /* Router.swift */; };
@@ -35,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		35008B061F3C1ADF00E6C349 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35C3F3021F2921560083B71B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 35C3F3091F2921560083B71B;
+			remoteInfo = Instagram23;
+		};
 		35C3F31F1F2921560083B71B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 35C3F3021F2921560083B71B /* Project object */;
@@ -46,6 +54,10 @@
 
 /* Begin PBXFileReference section */
 		0C995346A4E8A322A81BED3C /* Pods-Instagram23Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram23Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram23Tests/Pods-Instagram23Tests.release.xcconfig"; sourceTree = "<group>"; };
+		35008B011F3C1ADF00E6C349 /* Instagram23UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Instagram23UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35008B031F3C1ADF00E6C349 /* Instagram23UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instagram23UITests.swift; sourceTree = "<group>"; };
+		35008B051F3C1ADF00E6C349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35008B0B1F3C1B0100E6C349 /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		3517122B1F2945B400605BCC /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		3517122D1F2947C500605BCC /* RestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestExtensions.swift; sourceTree = "<group>"; };
 		3517122F1F2949FF00605BCC /* UserAuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuthWebViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +80,6 @@
 		35C3F3171F2921560083B71B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35C3F3191F2921560083B71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C3F31E1F2921560083B71B /* Instagram23Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Instagram23Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		35C3F3221F2921560083B71B /* Instagram23Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instagram23Tests.swift; sourceTree = "<group>"; };
 		35C3F3241F2921560083B71B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35C3F3321F2925A50083B71B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		35C3F3341F2929EA0083B71B /* UserAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuthViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +92,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		35008AFE1F3C1ADF00E6C349 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35C3F3071F2921560083B71B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35008B021F3C1ADF00E6C349 /* Instagram23UITests */ = {
+			isa = PBXGroup;
+			children = (
+				35008B031F3C1ADF00E6C349 /* Instagram23UITests.swift */,
+				35008B051F3C1ADF00E6C349 /* Info.plist */,
+			);
+			path = Instagram23UITests;
+			sourceTree = "<group>";
+		};
 		351712371F295B9B00605BCC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +152,7 @@
 			children = (
 				35C3F30C1F2921560083B71B /* Instagram23 */,
 				35C3F3211F2921560083B71B /* Instagram23Tests */,
+				35008B021F3C1ADF00E6C349 /* Instagram23UITests */,
 				35C3F30B1F2921560083B71B /* Products */,
 				A62CB127078D974DB4F8C97D /* Pods */,
 				3CA8ACA4DE3D50E46586482E /* Frameworks */,
@@ -136,6 +164,7 @@
 			children = (
 				35C3F30A1F2921560083B71B /* Instagram23.app */,
 				35C3F31E1F2921560083B71B /* Instagram23Tests.xctest */,
+				35008B011F3C1ADF00E6C349 /* Instagram23UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,8 +187,8 @@
 		35C3F3211F2921560083B71B /* Instagram23Tests */ = {
 			isa = PBXGroup;
 			children = (
-				35C3F3221F2921560083B71B /* Instagram23Tests.swift */,
 				35C3F3241F2921560083B71B /* Info.plist */,
+				35008B0B1F3C1B0100E6C349 /* RouterTests.swift */,
 			);
 			path = Instagram23Tests;
 			sourceTree = "<group>";
@@ -238,6 +267,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		35008B001F3C1ADF00E6C349 /* Instagram23UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35008B0A1F3C1ADF00E6C349 /* Build configuration list for PBXNativeTarget "Instagram23UITests" */;
+			buildPhases = (
+				35008AFD1F3C1ADF00E6C349 /* Sources */,
+				35008AFE1F3C1ADF00E6C349 /* Frameworks */,
+				35008AFF1F3C1ADF00E6C349 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35008B071F3C1ADF00E6C349 /* PBXTargetDependency */,
+			);
+			name = Instagram23UITests;
+			productName = Instagram23UITests;
+			productReference = 35008B011F3C1ADF00E6C349 /* Instagram23UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		35C3F3091F2921560083B71B /* Instagram23 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35C3F3271F2921560083B71B /* Build configuration list for PBXNativeTarget "Instagram23" */;
@@ -289,6 +336,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = DannyAu;
 				TargetAttributes = {
+					35008B001F3C1ADF00E6C349 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 35C3F3091F2921560083B71B;
+					};
 					35C3F3091F2921560083B71B = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
@@ -315,11 +367,19 @@
 			targets = (
 				35C3F3091F2921560083B71B /* Instagram23 */,
 				35C3F31D1F2921560083B71B /* Instagram23Tests */,
+				35008B001F3C1ADF00E6C349 /* Instagram23UITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		35008AFF1F3C1ADF00E6C349 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35C3F3081F2921560083B71B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,6 +494,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		35008AFD1F3C1ADF00E6C349 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35008B041F3C1ADF00E6C349 /* Instagram23UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35C3F3061F2921560083B71B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,13 +531,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35C3F3231F2921560083B71B /* Instagram23Tests.swift in Sources */,
+				35008B0C1F3C1B0100E6C349 /* RouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		35008B071F3C1ADF00E6C349 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 35C3F3091F2921560083B71B /* Instagram23 */;
+			targetProxy = 35008B061F3C1ADF00E6C349 /* PBXContainerItemProxy */;
+		};
 		35C3F3201F2921560083B71B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 35C3F3091F2921560083B71B /* Instagram23 */;
@@ -497,6 +570,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		35008B081F3C1ADF00E6C349 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Instagram23UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dannyau.Instagram23UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Instagram23;
+			};
+			name = Debug;
+		};
+		35008B091F3C1ADF00E6C349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Instagram23UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dannyau.Instagram23UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Instagram23;
+			};
+			name = Release;
+		};
 		35C3F3251F2921560083B71B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -653,6 +750,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		35008B0A1F3C1ADF00E6C349 /* Build configuration list for PBXNativeTarget "Instagram23UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35008B081F3C1ADF00E6C349 /* Debug */,
+				35008B091F3C1ADF00E6C349 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		35C3F3051F2921560083B71B /* Build configuration list for PBXProject "Instagram23" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

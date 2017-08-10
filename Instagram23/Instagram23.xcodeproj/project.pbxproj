@@ -12,6 +12,9 @@
 		35008B0C1F3C1B0100E6C349 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B0B1F3C1B0100E6C349 /* RouterTests.swift */; };
 		35008B0E1F3C2FDC00E6C349 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B0D1F3C2FDC00E6C349 /* AuthTests.swift */; };
 		35008B101F3C314000E6C349 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 35008B0F1F3C314000E6C349 /* User.json */; };
+		35008B191F3C434E00E6C349 /* RecentMedia.json in Resources */ = {isa = PBXBuildFile; fileRef = 35008B181F3C434E00E6C349 /* RecentMedia.json */; };
+		35008B1B1F3C43AB00E6C349 /* PhotoStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B1A1F3C43AB00E6C349 /* PhotoStreamTests.swift */; };
+		35008B1D1F3C46D800E6C349 /* MediaLikes.json in Resources */ = {isa = PBXBuildFile; fileRef = 35008B1C1F3C46D800E6C349 /* MediaLikes.json */; };
 		3517122C1F2945B400605BCC /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122B1F2945B400605BCC /* AppConstants.swift */; };
 		3517122E1F2947C500605BCC /* RestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122D1F2947C500605BCC /* RestExtensions.swift */; };
 		351712301F2949FF00605BCC /* UserAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122F1F2949FF00605BCC /* UserAuthWebViewController.swift */; };
@@ -62,6 +65,9 @@
 		35008B0B1F3C1B0100E6C349 /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		35008B0D1F3C2FDC00E6C349 /* AuthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		35008B0F1F3C314000E6C349 /* User.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		35008B181F3C434E00E6C349 /* RecentMedia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecentMedia.json; sourceTree = "<group>"; };
+		35008B1A1F3C43AB00E6C349 /* PhotoStreamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamTests.swift; sourceTree = "<group>"; };
+		35008B1C1F3C46D800E6C349 /* MediaLikes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MediaLikes.json; sourceTree = "<group>"; };
 		3517122B1F2945B400605BCC /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		3517122D1F2947C500605BCC /* RestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestExtensions.swift; sourceTree = "<group>"; };
 		3517122F1F2949FF00605BCC /* UserAuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuthWebViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 		35008B111F3C31A200E6C349 /* MockResponses */ = {
 			isa = PBXGroup;
 			children = (
+				35008B1C1F3C46D800E6C349 /* MediaLikes.json */,
+				35008B181F3C434E00E6C349 /* RecentMedia.json */,
 				35008B0F1F3C314000E6C349 /* User.json */,
 			);
 			name = MockResponses;
@@ -202,6 +210,7 @@
 				35008B0D1F3C2FDC00E6C349 /* AuthTests.swift */,
 				35C3F3241F2921560083B71B /* Info.plist */,
 				35008B111F3C31A200E6C349 /* MockResponses */,
+				35008B1A1F3C43AB00E6C349 /* PhotoStreamTests.swift */,
 				35008B0B1F3C1B0100E6C349 /* RouterTests.swift */,
 			);
 			path = Instagram23Tests;
@@ -410,6 +419,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35008B101F3C314000E6C349 /* User.json in Resources */,
+				35008B191F3C434E00E6C349 /* RecentMedia.json in Resources */,
+				35008B1D1F3C46D800E6C349 /* MediaLikes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35008B0C1F3C1B0100E6C349 /* RouterTests.swift in Sources */,
+				35008B1B1F3C43AB00E6C349 /* PhotoStreamTests.swift in Sources */,
 				35008B0E1F3C2FDC00E6C349 /* AuthTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

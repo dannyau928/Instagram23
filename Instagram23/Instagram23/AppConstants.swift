@@ -43,3 +43,6 @@ public let RESPONSE_TYPE_TOKEN = "token"
 public let SCOPE_PUBLIC_CONTENT = "public_content"
 
 public let PRODUCT_COLOR_THEME = UIColor(red: 39/255, green: 164/255, blue: 72/255, alpha: 1)
+
+public let MOCK_FLAG = "MockFlag"
+public var IS_MOCKED = false

@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ]
         UINavigationBar.appearance().tintColor = PRODUCT_COLOR_THEME   // navigation bar caret color
         
+        if ProcessInfo().arguments.contains(MOCK_FLAG) {
+            IS_MOCKED = true
+        }
+        
         return true
     }
 

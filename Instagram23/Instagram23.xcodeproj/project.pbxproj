@@ -15,6 +15,8 @@
 		35008B1B1F3C43AB00E6C349 /* PhotoStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B1A1F3C43AB00E6C349 /* PhotoStreamTests.swift */; };
 		35008B1D1F3C46D800E6C349 /* MediaLikes.json in Resources */ = {isa = PBXBuildFile; fileRef = 35008B1C1F3C46D800E6C349 /* MediaLikes.json */; };
 		35008B1F1F3C4A5200E6C349 /* ProfileViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B1E1F3C4A5200E6C349 /* ProfileViewControllerUITests.swift */; };
+		35008B211F3CE6A200E6C349 /* PhotoStreamViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B201F3CE6A200E6C349 /* PhotoStreamViewControllerTests.swift */; };
+		35008B231F3CF34800E6C349 /* PhotoLikesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B221F3CF34800E6C349 /* PhotoLikesViewControllerTests.swift */; };
 		3517122C1F2945B400605BCC /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122B1F2945B400605BCC /* AppConstants.swift */; };
 		3517122E1F2947C500605BCC /* RestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122D1F2947C500605BCC /* RestExtensions.swift */; };
 		351712301F2949FF00605BCC /* UserAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122F1F2949FF00605BCC /* UserAuthWebViewController.swift */; };
@@ -68,6 +70,8 @@
 		35008B1A1F3C43AB00E6C349 /* PhotoStreamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamTests.swift; sourceTree = "<group>"; };
 		35008B1C1F3C46D800E6C349 /* MediaLikes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MediaLikes.json; sourceTree = "<group>"; };
 		35008B1E1F3C4A5200E6C349 /* ProfileViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerUITests.swift; sourceTree = "<group>"; };
+		35008B201F3CE6A200E6C349 /* PhotoStreamViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewControllerTests.swift; sourceTree = "<group>"; };
+		35008B221F3CF34800E6C349 /* PhotoLikesViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLikesViewControllerTests.swift; sourceTree = "<group>"; };
 		3517122B1F2945B400605BCC /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		3517122D1F2947C500605BCC /* RestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestExtensions.swift; sourceTree = "<group>"; };
 		3517122F1F2949FF00605BCC /* UserAuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuthWebViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				35008B051F3C1ADF00E6C349 /* Info.plist */,
+				35008B221F3CF34800E6C349 /* PhotoLikesViewControllerTests.swift */,
+				35008B201F3CE6A200E6C349 /* PhotoStreamViewControllerTests.swift */,
 				35008B1E1F3C4A5200E6C349 /* ProfileViewControllerUITests.swift */,
 			);
 			path = Instagram23UITests;
@@ -525,7 +531,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35008B231F3CF34800E6C349 /* PhotoLikesViewControllerTests.swift in Sources */,
 				35008B1F1F3C4A5200E6C349 /* ProfileViewControllerUITests.swift in Sources */,
+				35008B211F3CE6A200E6C349 /* PhotoStreamViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

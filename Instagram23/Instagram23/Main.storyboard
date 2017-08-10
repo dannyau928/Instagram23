@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ody-z0-oZ6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ody-z0-oZ6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -100,6 +100,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IA9-cB-fvq">
                                 <rect key="frame" x="164.5" y="264.5" width="45" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nameLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -122,6 +123,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1be-5z-Bz7">
                                                 <rect key="frame" x="29.5" y="0.0" width="10.5" height="21"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="followersLabel"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -147,6 +149,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="age-V4-0Mh">
                                                 <rect key="frame" x="29" y="0.0" width="10.5" height="21"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="followingLabel"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -246,33 +249,33 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H7g-zV-cjA">
-                                                    <rect key="frame" x="10" y="10" width="312" height="312"/>
+                                                    <rect key="frame" x="10" y="10" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="XCS-TI-rk0"/>
                                                         <constraint firstAttribute="width" secondItem="H7g-zV-cjA" secondAttribute="height" multiplier="1:1" id="dXx-jg-SM9"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dax-Xl-s1Q">
-                                                    <rect key="frame" x="332" y="159.5" width="33" height="14.5"/>
+                                                    <rect key="frame" x="45" y="16" width="320" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c64-kG-vSw">
-                                                    <rect key="frame" x="0.0" y="332" width="375" height="375"/>
+                                                    <rect key="frame" x="0.0" y="45" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="c64-kG-vSw" secondAttribute="height" multiplier="1:1" id="fmt-Ud-iGN"/>
                                                     </constraints>
                                                 </imageView>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumbsUp" translatesAutoresizingMaskIntoConstraints="NO" id="tk1-sI-ydX">
-                                                    <rect key="frame" x="149.5" y="482" width="75" height="75"/>
+                                                    <rect key="frame" x="31.5" y="77" width="16" height="16"/>
                                                     <color key="tintColor" red="0.1529411765" green="0.64313725489999995" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="tk1-sI-ydX" secondAttribute="height" multiplier="1:1" id="L0N-n1-9nJ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yf-ZL-Dh5">
-                                                    <rect key="frame" x="15" y="722" width="25" height="25"/>
+                                                    <rect key="frame" x="15" y="140" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="5yf-ZL-Dh5" secondAttribute="height" multiplier="1:1" id="B5O-wQ-11P"/>
                                                         <constraint firstAttribute="width" constant="25" id="D3m-Tb-sip"/>
@@ -284,7 +287,7 @@
                                                     </connections>
                                                 </button>
                                                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5X-uQ-gbl">
-                                                    <rect key="frame" x="55" y="719.5" width="44" height="30"/>
+                                                    <rect key="frame" x="55" y="137.5" width="44" height="30"/>
                                                     <state key="normal" title="0 likes">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>

@@ -1,14 +1,14 @@
 //
-//  Instagram23UITests.swift
-//  Instagram23UITests
+//  ProfileViewControllerUITests.swift
+//  Instagram23
 //
-//  Created by Danny Au on 8/9/17.
+//  Created by Danny Au on 8/10/17.
 //  Copyright © 2017 DannyAu. All rights reserved.
 //
 
 import XCTest
 
-class Instagram23UITests: XCTestCase {
+class ProfileViewControllerUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -28,9 +28,13 @@ class Instagram23UITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testProfilePage() {
+        let app = XCUIApplication()
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Profile"].tap()
+        
+        XCTAssertEqual(app.staticTexts["nameLabel"].label, "Tester231")
+        XCTAssertEqual(app.staticTexts["followersLabel"].label, "0")
+        XCTAssertEqual(app.staticTexts["followingLabel"].label, "1")
     }
-    
 }

@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2091D13208CB6B5F899431EE /* Pods_Instagram23Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCF550A6D93A71C208CD188 /* Pods_Instagram23Tests.framework */; };
-		35008B041F3C1ADF00E6C349 /* Instagram23UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B031F3C1ADF00E6C349 /* Instagram23UITests.swift */; };
 		35008B0C1F3C1B0100E6C349 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B0B1F3C1B0100E6C349 /* RouterTests.swift */; };
 		35008B0E1F3C2FDC00E6C349 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B0D1F3C2FDC00E6C349 /* AuthTests.swift */; };
 		35008B101F3C314000E6C349 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 35008B0F1F3C314000E6C349 /* User.json */; };
 		35008B191F3C434E00E6C349 /* RecentMedia.json in Resources */ = {isa = PBXBuildFile; fileRef = 35008B181F3C434E00E6C349 /* RecentMedia.json */; };
 		35008B1B1F3C43AB00E6C349 /* PhotoStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B1A1F3C43AB00E6C349 /* PhotoStreamTests.swift */; };
 		35008B1D1F3C46D800E6C349 /* MediaLikes.json in Resources */ = {isa = PBXBuildFile; fileRef = 35008B1C1F3C46D800E6C349 /* MediaLikes.json */; };
+		35008B1F1F3C4A5200E6C349 /* ProfileViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35008B1E1F3C4A5200E6C349 /* ProfileViewControllerUITests.swift */; };
 		3517122C1F2945B400605BCC /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122B1F2945B400605BCC /* AppConstants.swift */; };
 		3517122E1F2947C500605BCC /* RestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122D1F2947C500605BCC /* RestExtensions.swift */; };
 		351712301F2949FF00605BCC /* UserAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3517122F1F2949FF00605BCC /* UserAuthWebViewController.swift */; };
@@ -60,7 +60,6 @@
 /* Begin PBXFileReference section */
 		0C995346A4E8A322A81BED3C /* Pods-Instagram23Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram23Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram23Tests/Pods-Instagram23Tests.release.xcconfig"; sourceTree = "<group>"; };
 		35008B011F3C1ADF00E6C349 /* Instagram23UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Instagram23UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		35008B031F3C1ADF00E6C349 /* Instagram23UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instagram23UITests.swift; sourceTree = "<group>"; };
 		35008B051F3C1ADF00E6C349 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35008B0B1F3C1B0100E6C349 /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 		35008B0D1F3C2FDC00E6C349 /* AuthTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		35008B181F3C434E00E6C349 /* RecentMedia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RecentMedia.json; sourceTree = "<group>"; };
 		35008B1A1F3C43AB00E6C349 /* PhotoStreamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamTests.swift; sourceTree = "<group>"; };
 		35008B1C1F3C46D800E6C349 /* MediaLikes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MediaLikes.json; sourceTree = "<group>"; };
+		35008B1E1F3C4A5200E6C349 /* ProfileViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerUITests.swift; sourceTree = "<group>"; };
 		3517122B1F2945B400605BCC /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		3517122D1F2947C500605BCC /* RestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestExtensions.swift; sourceTree = "<group>"; };
 		3517122F1F2949FF00605BCC /* UserAuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuthWebViewController.swift; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 		35008B021F3C1ADF00E6C349 /* Instagram23UITests */ = {
 			isa = PBXGroup;
 			children = (
-				35008B031F3C1ADF00E6C349 /* Instagram23UITests.swift */,
 				35008B051F3C1ADF00E6C349 /* Info.plist */,
+				35008B1E1F3C4A5200E6C349 /* ProfileViewControllerUITests.swift */,
 			);
 			path = Instagram23UITests;
 			sourceTree = "<group>";
@@ -361,6 +361,7 @@
 				TargetAttributes = {
 					35008B001F3C1ADF00E6C349 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 35C3F3091F2921560083B71B;
 					};
@@ -524,7 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35008B041F3C1ADF00E6C349 /* Instagram23UITests.swift in Sources */,
+				35008B1F1F3C4A5200E6C349 /* ProfileViewControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,10 +602,12 @@
 		35008B081F3C1ADF00E6C349 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Instagram23UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dannyau.Instagram23UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Instagram23;
 			};
@@ -613,6 +616,7 @@
 		35008B091F3C1ADF00E6C349 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Instagram23UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dannyau.Instagram23UITests;

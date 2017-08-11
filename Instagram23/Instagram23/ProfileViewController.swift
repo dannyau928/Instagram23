@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let user = Auth.user
+        let user = AuthManager.sharedInstance.user
         let placeholder = UIImage(named: "genderless_avatar_bg")
         if let url = URL(string: user.profilePicture) {
             let filter = AspectScaledToFitSizeFilter(size: pictureView.frame.size)
@@ -73,7 +73,7 @@ class ProfileViewController: UIViewController {
             }
         }
 
-        Auth.accessToken = ""
+        AuthManager.sharedInstance.accessToken = ""
         _ = KeychainWrapper.removeObjectForKey(KEY_ACCESS_TOKEN)
 
         Utility.tabBarController?.dismiss(animated: true, completion: { 

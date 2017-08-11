@@ -24,37 +24,9 @@ class PhotoStreamTests: XCTestCase {
     }
     
     func testGetUser() {
-        class MockPhotoStream: PhotoStream {
-            override class func getRecentMedia(_ callback: @escaping (_ photos: [Photo]?, _ error: NSError?) -> Void) -> Void {
-                guard let path = Bundle(for: type(of: AuthTests().self)).path(forResource: "RecentMedia", ofType: "json") else {
-                    XCTFail()
-                    return
-                }
-                
-                guard let jsonString = try? String(contentsOfFile: path, encoding: .utf8) else {
-                    XCTFail()
-                    return
-                }
-                
-                guard let jsonData = jsonString.data(using: .utf8) else {
-                    XCTFail()
-                    return
-                }
-
-                var photos = [Photo]()
-                let jsonObj = JSON(data: jsonData)
-                if let jsonArray = jsonObj.array {
-                    for jsonPhoto in jsonArray {
-                        photos.append(Photo(json: jsonPhoto))
-                    }
-                }
-                callback(photos, nil)
-            }
-        }
-        
         let recentMediaExpectation = expectation(description: "get recent media")
         
-        MockPhotoStream.getRecentMedia({ (photos, error) in
+        PhotoStreamManager.sharedInstance.getRecentMedia({ (photos, error) in
             XCTAssertNil(error)
             
             guard let photos = photos else {
@@ -80,37 +52,9 @@ class PhotoStreamTests: XCTestCase {
     }
     
     func testGetMediaLikes() {
-        class MockPhotoStream: PhotoStream {
-            override class func getMediaLikes(_ id: String, _ callback: @escaping (_ users: [User]?, _ error: NSError?) -> Void) -> Void {
-                guard let path = Bundle(for: type(of: AuthTests().self)).path(forResource: "MediaLikes", ofType: "json") else {
-                    XCTFail()
-                    return
-                }
-                
-                guard let jsonString = try? String(contentsOfFile: path, encoding: .utf8) else {
-                    XCTFail()
-                    return
-                }
-                
-                guard let jsonData = jsonString.data(using: .utf8) else {
-                    XCTFail()
-                    return
-                }
-                
-                var users = [User]()
-                let jsonObj = JSON(data: jsonData)
-                if let jsonArray = jsonObj.array {
-                    for jsonUser in jsonArray {
-                        users.append(User(json: jsonUser))
-                    }
-                }
-                callback(users, nil)
-            }
-        }
-        
         let recentMediaExpectation = expectation(description: "get recent media")
         
-        MockPhotoStream.getMediaLikes("", { (users, error) in
+        PhotoStreamManager.sharedInstance.getMediaLikes("1490910873554950190_4141989283", { (users, error) in
             XCTAssertNil(error)
             
             guard let users = users else {

@@ -36,7 +36,7 @@ class PhotoStreamViewController: UIViewController {
     }
     
     func refreshPhotos() {
-        PhotoStream.getRecentMedia { [weak self] (photos, error) in
+        PhotoStreamManager.sharedInstance.getRecentMedia { [weak self] (photos, error) in
             guard let strongSelf = self else { return }
             
             strongSelf.refreshControl.endRefreshing()
@@ -83,7 +83,7 @@ class PhotoStreamViewController: UIViewController {
         if let index = photos.index(where: { $0.id == id }) {
             var photo = photos[index]
             if !photo.userHasLiked {
-                PhotoStream.likeMedia(photo.id, { [weak self] (error) in
+                PhotoStreamManager.sharedInstance.likeMedia(photo.id, { [weak self] (error) in
                     guard let strongSelf = self else { return }
                     
                     if error == nil {
@@ -108,7 +108,7 @@ class PhotoStreamViewController: UIViewController {
         if let index = photos.index(where: { $0.id == id }) {
             var photo = photos[index]
             if photo.userHasLiked {
-                PhotoStream.unlikeMedia(photo.id, { [weak self] (error) in
+                PhotoStreamManager.sharedInstance.unlikeMedia(photo.id, { [weak self] (error) in
                     guard let strongSelf = self else { return }
                     
                     if error == nil {

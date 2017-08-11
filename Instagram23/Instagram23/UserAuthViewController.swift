@@ -23,6 +23,14 @@ class UserAuthViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if IS_MOCKED {
+            getUser("")
+        }
+    }
+    
     @IBAction func loginClicked(_ sender: Any) {
         let request = Alamofire.request(Router.logInInstagram()).print()
         
@@ -39,8 +47,8 @@ class UserAuthViewController: UIViewController {
 
     fileprivate func getUser(_ accessToken: String) {
         activityIndicator.startAnimating()
-        Auth.accessToken = accessToken
-        Auth.getUser() { [weak self] (user, error) in
+        AuthManager.sharedInstance.accessToken = accessToken
+        AuthManager.sharedInstance.getUser() { [weak self] (user, error) in
             guard let strongSelf = self else { return }
             
             strongSelf.activityIndicator.stopAnimating()

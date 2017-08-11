@@ -33,7 +33,7 @@ class PhotoLikesViewController: UIViewController {
         guard let mediaId = mediaId else { return }
         
         activityIndicator.startAnimating()
-        PhotoStream.getMediaLikes(mediaId) { [weak self] (users, error) in
+        PhotoStreamManager.sharedInstance.getMediaLikes(mediaId) { [weak self] (users, error) in
             guard let strongSelf = self else { return }
             
             strongSelf.activityIndicator.stopAnimating()

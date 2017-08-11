@@ -14,7 +14,7 @@ class RouterTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        Auth.accessToken = "TestAccessToken"
+        AuthManager.sharedInstance.accessToken = "TestAccessToken"
     }
     
     override func tearDown() {
@@ -36,7 +36,7 @@ class RouterTests: XCTestCase {
     func testGetUser() {
         let urlRequestConvertible = Router.getUser()
 
-        let endpoint = "\(BASE_URL)/v1/users/self/?access_token=\(Auth.accessToken)"
+        let endpoint = "\(BASE_URL)/v1/users/self/?access_token=\(AuthManager.sharedInstance.accessToken)"
         let url = urlRequestConvertible.urlRequest?.url?.absoluteString
         XCTAssertEqual(endpoint, url)
         
@@ -47,7 +47,7 @@ class RouterTests: XCTestCase {
     func testGetRecentMedia() {
         let urlRequestConvertible = Router.getRecentMedia()
 
-        let endpoint = "\(BASE_URL)/v1/users/self/media/recent/?access_token=\(Auth.accessToken)"
+        let endpoint = "\(BASE_URL)/v1/users/self/media/recent/?access_token=\(AuthManager.sharedInstance.accessToken)"
         let url = urlRequestConvertible.urlRequest?.url?.absoluteString
         XCTAssertEqual(endpoint, url)
         
@@ -66,7 +66,7 @@ class RouterTests: XCTestCase {
         let httpMethod = urlRequestConvertible.urlRequest?.httpMethod
         XCTAssertEqual(httpMethod, Alamofire.HTTPMethod.post.rawValue)
         
-        let data = "access_token=\(Auth.accessToken)&scope=public_content"
+        let data = "access_token=\(AuthManager.sharedInstance.accessToken)&scope=public_content"
         var body = ""
         if let bodyData = urlRequestConvertible.urlRequest?.httpBody {
             body = String(data: bodyData, encoding: .utf8) ?? ""
@@ -78,7 +78,7 @@ class RouterTests: XCTestCase {
         let testMediaId = "TestMediaId"
         let urlRequestConvertible = Router.unlikeMedia(testMediaId)
         
-        let endpoint = "\(BASE_URL)/v1/media/\(testMediaId)/likes?access_token=\(Auth.accessToken)&scope=public_content"
+        let endpoint = "\(BASE_URL)/v1/media/\(testMediaId)/likes?access_token=\(AuthManager.sharedInstance.accessToken)&scope=public_content"
         let url = urlRequestConvertible.urlRequest?.url?.absoluteString
         
         XCTAssertEqual(endpoint, url)
@@ -91,7 +91,7 @@ class RouterTests: XCTestCase {
         let testMediaId = "TestMediaId"
         let urlRequestConvertible = Router.getMediaLikes(testMediaId)
         
-        let endpoint = "\(BASE_URL)/v1/media/\(testMediaId)/likes?access_token=\(Auth.accessToken)&scope=public_content"
+        let endpoint = "\(BASE_URL)/v1/media/\(testMediaId)/likes?access_token=\(AuthManager.sharedInstance.accessToken)&scope=public_content"
         let url = urlRequestConvertible.urlRequest?.url?.absoluteString
         
         XCTAssertEqual(endpoint, url)

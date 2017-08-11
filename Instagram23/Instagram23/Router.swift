@@ -36,25 +36,25 @@ enum Router: URLRequestConvertible {
                 ], .url)
             case .getUser():
                 return (.get, "/v1/users/self/", [
-                    KEY_ACCESS_TOKEN: Auth.accessToken as AnyObject
+                    KEY_ACCESS_TOKEN: AuthManager.sharedInstance.accessToken as AnyObject
                 ], .url)
             case .getRecentMedia():
                 return (.get, "/v1/users/self/media/recent/", [
-                    KEY_ACCESS_TOKEN: Auth.accessToken as AnyObject
+                    KEY_ACCESS_TOKEN: AuthManager.sharedInstance.accessToken as AnyObject
                 ], .url)
             case .likeMedia(let id):
                 return (.post, "/v1/media/\(id)/likes", [
-                    KEY_ACCESS_TOKEN: Auth.accessToken as AnyObject,
+                    KEY_ACCESS_TOKEN: AuthManager.sharedInstance.accessToken as AnyObject,
                     KEY_SCOPE: SCOPE_PUBLIC_CONTENT as AnyObject
                 ], .url)
             case .unlikeMedia(let id):
                 return (.delete, "/v1/media/\(id)/likes", [
-                    KEY_ACCESS_TOKEN: Auth.accessToken as AnyObject,
+                    KEY_ACCESS_TOKEN: AuthManager.sharedInstance.accessToken as AnyObject,
                     KEY_SCOPE: SCOPE_PUBLIC_CONTENT as AnyObject
                 ], .url)
             case .getMediaLikes(let id):
                 return (.get, "/v1/media/\(id)/likes", [
-                    KEY_ACCESS_TOKEN: Auth.accessToken as AnyObject,
+                    KEY_ACCESS_TOKEN: AuthManager.sharedInstance.accessToken as AnyObject,
                     KEY_SCOPE: SCOPE_PUBLIC_CONTENT as AnyObject
                 ], .url)
             }

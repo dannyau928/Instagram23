@@ -68,7 +68,7 @@ class PhotoLikesViewControllerTests: XCTestCase {
         XCTAssertEqual(likeCellAtIndexZero.staticTexts["fullName"].label, "Tester231")
         
         let likeCellAtIndexOne = likesTable.cells.element(boundBy: 1)
-        XCTAssertEqual(likeCellAtIndexOne.staticTexts["userName"].label, "mobile23_tester5")
-        XCTAssertEqual(likeCellAtIndexOne.staticTexts["fullName"].label, "23andMobile 5")
+        XCTAssertEqual(likeCellAtIndexOne.staticTexts["userName"].label, "testUserName")
+        XCTAssertEqual(likeCellAtIndexOne.staticTexts["fullName"].label, "testFullName")
     }
 }

@@ -12,10 +12,9 @@ import XCTest
 @testable import Instagram23
 
 class AuthTests: XCTestCase {
-    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        IS_MOCKED = true
     }
     
     override func tearDown() {
@@ -24,32 +23,9 @@ class AuthTests: XCTestCase {
     }
 
     func testGetUser() {
-        class MockAuth: Auth {
-            override class func getUser(_ callback: @escaping (_ user: User?, _ error: NSError?) -> Void) -> Void {
-                guard let path = Bundle(for: type(of: AuthTests().self)).path(forResource: "User", ofType: "json") else {
-                    XCTFail()
-                    return
-                }
-                
-                guard let jsonString = try? String(contentsOfFile: path, encoding: .utf8) else {
-                    XCTFail()
-                    return
-                }
-                
-                guard let jsonData = jsonString.data(using: .utf8) else {
-                    XCTFail()
-                    return
-                }
-                
-                let jsonObj = JSON(data: jsonData)
-                user = User(json: jsonObj)
-                callback(user, nil)
-            }
-        }
-        
         let userExpectation = expectation(description: "get user")
         
-        MockAuth.getUser {(user, error) in
+        AuthManager.sharedInstance.getUser {(user, error) in
             XCTAssertNil(error)
             
             guard let user = user else {

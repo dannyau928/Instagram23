@@ -23,9 +23,7 @@ class Auth {
                     case .success(let data):
                         let json = JSON(data)
                         if json[KEY_DATA] != JSON.null {
-                            let user = User(json: json[KEY_DATA])
-                            AuthManager.sharedInstance.user = user
-                            callback(user, nil)
+                            callback(User(json: json[KEY_DATA]), nil)
                         } else {
                             callback(nil, NSError(domain: "Auth.getUser", code: 0, userInfo: [KEY_MESSAGE : "SUCCESS without user data"]))
                         }

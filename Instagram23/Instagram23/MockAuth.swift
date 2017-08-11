@@ -27,8 +27,6 @@ class MockAuth: Auth {
         }
         
         let jsonObj = JSON(data: jsonData)
-        let user = User(json: jsonObj)
-        AuthManager.sharedInstance.user = user
-        callback(user, nil)
+        callback(User(json: jsonObj), nil)
     }
 }

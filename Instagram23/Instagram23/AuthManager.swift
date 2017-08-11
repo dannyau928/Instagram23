@@ -20,10 +20,27 @@ class AuthManager {
     }
 
     func getUser(_ callback: @escaping (_ user: User?, _ error: NSError?) -> Void) -> Void {
-        if IS_MOCKED {
-            MockAuth.getUser(callback)
-        } else {
-            Auth.getUser(callback)
+        let getUserCallback = { (_ user: User?, _ error: NSError?) in
+            if let user = user {
+                self.user = user
+            }
+            callback(user, error)
         }
+        
+        if IS_MOCKED {
+            MockAuth.getUser(getUserCallback)
+        } else {
+            Auth.getUser(getUserCallback)
+        }
+    }
+    
+    func setAccessToken(accessToken: String) {
+        self.accessToken = accessToken
+        _ = KeychainWrapper.setString(accessToken, forKey: KEY_ACCESS_TOKEN)
+    }
+    
+    func clearAccessToken() {
+        self.accessToken = ""
+        _ = KeychainWrapper.removeObjectForKey(KEY_ACCESS_TOKEN)
     }
 }

@@ -73,9 +73,7 @@ class ProfileViewController: UIViewController {
             }
         }
 
-        AuthManager.sharedInstance.accessToken = ""
-        _ = KeychainWrapper.removeObjectForKey(KEY_ACCESS_TOKEN)
-
+        AuthManager.sharedInstance.clearAccessToken()
         Utility.tabBarController?.dismiss(animated: true, completion: { 
             Utility.tabBarController = nil
         })

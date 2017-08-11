@@ -36,10 +36,7 @@ class UserAuthViewController: UIViewController {
         
         if let urlRequest = request.request, let userAuthWebVC = storyboard?.instantiateViewController(withIdentifier: USER_AUTH_WEB_VC_ID) as? UserAuthWebViewController {
             userAuthWebVC.urlRequest = urlRequest
-            userAuthWebVC.callback = { (accessToken: String) -> Void in
-                _ = KeychainWrapper.setString(accessToken, forKey: KEY_ACCESS_TOKEN)
-                self.getUser(accessToken)
-            }
+            userAuthWebVC.callback = getUser(_:)
 
             present(UINavigationController(rootViewController: userAuthWebVC), animated: true, completion: nil)
         }
@@ -47,7 +44,7 @@ class UserAuthViewController: UIViewController {
 
     fileprivate func getUser(_ accessToken: String) {
         activityIndicator.startAnimating()
-        AuthManager.sharedInstance.accessToken = accessToken
+        AuthManager.sharedInstance.setAccessToken(accessToken: accessToken)
         AuthManager.sharedInstance.getUser() { [weak self] (user, error) in
             guard let strongSelf = self else { return }
             
@@ -60,7 +57,7 @@ class UserAuthViewController: UIViewController {
                     strongSelf.present(tabBarController, animated: true, completion: nil)
                 }
             } else {
-                _ = KeychainWrapper.removeObjectForKey(KEY_ACCESS_TOKEN)
+                AuthManager.sharedInstance.clearAccessToken()
                 let errorMessage = error?.userInfo[KEY_MESSAGE] as? String ??
                     NSLocalizedString("GET_USER_FAILURE_MESSAGE", comment: "")
                 Utility.showAlert(strongSelf, title: nil, message: errorMessage, actions: [
